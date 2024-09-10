@@ -17,7 +17,7 @@ ul {
 }
 
 li {
-    background-color: beige;
+    background-color: white;
     border: 1px solid #ddd;
     margin-bottom: 10px;
     padding: 10px;
@@ -27,7 +27,7 @@ li {
 #sessionsList {
     font-family: 'Space Mono', monospace; 
     margin-top: 20px;
-    background-color: beige;
+    
     padding: 10px;
 }
 
@@ -37,15 +37,17 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
-    background-color: white;
+    margin-bottom: 10px;
+    background-color: lightblue;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
     padding: 10px;
     cursor: pointer;
-    
+    border-radius: 8px;
  }
 
 .session:hover {
-    background-color: #a7f2f5;
+    background-color: #ddd;
+    border: #ddd;
     transition: background-color 0.3s ease;
 }
 

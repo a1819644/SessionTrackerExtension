@@ -18,60 +18,36 @@ document.addEventListener('DOMContentLoaded', () => {
         savedSessions.forEach((session, index) => {
             const sessionDiv = document.createElement('div');
             sessionDiv.classList.add('session');
-            sessionDiv.style.position = 'relative'; // To allow the overlay to be positioned inside the div
-            sessionDiv.style.cursor = 'pointer'; // Make it clear the whole div is clickable
+            sessionDiv.style.position = 'relative'; // Position for hover overlay
+            sessionDiv.style.cursor = 'pointer'; // Show it's clickable
 
             const sessionTitle = document.createElement('p');
             sessionTitle.classList.add('session-title');
             sessionTitle.textContent = `${session.name} Saved on - ${session.date}`;
             sessionDiv.appendChild(sessionTitle);
 
-            // Add hover overlay text
+            // Create hover overlay text
             const hoverOverlay = document.createElement('div');
             hoverOverlay.classList.add('hover-overlay');
-            hoverOverlay.textContent = "Click to open all the tabs";
-            hoverOverlay.style.position = 'absolute';
-            hoverOverlay.style.top = '0';
-            hoverOverlay.style.left = '0';
-            hoverOverlay.style.right = '0';
-            hoverOverlay.style.bottom = '0';
-            hoverOverlay.style.display = 'flex';
-            hoverOverlay.style.justifyContent = 'center';
-            hoverOverlay.style.alignItems = 'center';
-            hoverOverlay.style.backgroundColor = 'rgba(0, 0, 0,1)';
-            hoverOverlay.style.color = '#fff';
-            hoverOverlay.style.fontSize = '16px';
-            hoverOverlay.style.opacity = '0';
-            hoverOverlay.style.transition = 'opacity 0.3s ease-in-out';
-
-            // Show the overlay when hovering
-            sessionDiv.addEventListener('mouseenter', () => {
-                hoverOverlay.style.opacity = '1';
-            });
-            sessionDiv.addEventListener('mouseleave', () => {
-                hoverOverlay.style.opacity = '0';
-            });
-
+            hoverOverlay.textContent = "click to open all tabs";
             sessionDiv.appendChild(hoverOverlay);
 
-            // Make the entire sessionDiv clickable to open all tabs
+            // Add event listener to open all tabs when session is clicked
             sessionDiv.addEventListener('click', () => {
                 session.tabs.forEach(tabUrl => {
                     chrome.tabs.create({ url: tabUrl });
                 });
             });
 
-            // Create the Delete icon
+            // Create delete icon
             const deleteIcon = document.createElement('i');
             deleteIcon.classList.add('fas', 'fa-trash-alt'); // Font Awesome trash icon
-            deleteIcon.style.cursor = 'pointer';
-            deleteIcon.style.color = '#ff4d4d'; // Red color for delete
             deleteIcon.addEventListener('click', (event) => {
-                event.stopPropagation(); // Prevent opening tabs when clicking delete
+                event.stopPropagation(); // Prevent triggering open tabs
                 deleteSession(index);
             });
 
-            // Append delete icon to the sessionDiv
+            // Append delete icon to session div
             sessionDiv.appendChild(deleteIcon);
             sessionsList.appendChild(sessionDiv);
         });
