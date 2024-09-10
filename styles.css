@@ -1,23 +1,28 @@
 h1 {
-    color: #3498db; /* This is a shade of blue */
+    color: #3498db;
+    /* This is a shade of blue */
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
     font-style: bold;
     text-align: center;
-}
-body{
-    background-color: gainsboro;
-    margin: 0px;
-}
-
-
-.homeButtons{
-    list-style-type: none; 
+  }
+  
+  body {
+    background-color: white;
+    margin: 5px;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .homeButtons {
+    list-style-type: none;
     padding: 10px;
     display: inline-flex;
-}
-
-.homeButtons #SaveCurrentSession{
+  }
+  
+  .homeButtons #SaveCurrentSession {
     font-size: medium;
     background-color: #3498db;
     color: white;
@@ -29,8 +34,9 @@ body{
     font-family: Arial, sans-serif;
     cursor: pointer;
     margin: 20px 10px 10px 10px;
-}
-.homeButtons #RestorePreviousSessions{
+  }
+  
+  .homeButtons #RestorePreviousSessions {
     font-size: medium;
     background-color: #3498db;
     color: white;
@@ -42,54 +48,85 @@ body{
     font-family: Arial, sans-serif;
     cursor: pointer;
     margin: 20px 10px 10px 10px;
-}
-
-
-#historyList{
+  }
+  
+  /* Current Session. html  */
+  
+  .header {
+    position: static;
+  }
+  
+  .header h1 {
+    color: #3498db;
+    font-size: 20px;
+    top: 10px;
+    text-align: left;
+    margin-left: 120px;
+    margin-top: 10px;
+    margin-right: 250px;
+    width: 100%;
+    letter-spacing: 1px;
+  }
+  
+  .header .back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .header .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  #historyList {
     list-style-type: none;
     padding: 0;
     margin: 5px;
-}
-
-
-.CurrentSessionform{
+  }
+  
+  .CurrentSessionform {
     margin: 10px;
     /* padding: 20px; */
     border-radius: 10px;
-    background-color: rgb(199, 235, 195);
+    background-color: rgb(245, 252, 213);
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
     font-size: small;
     text-decoration: none;
     font-family: Arial, sans-serif;
     letter-spacing: 1px;
-
-}
-
-.CurrentSessionform .SessionNameInline{
+  }
+  
+  .CurrentSessionform .SessionNameInline {
     display: flex;
     padding: 2px;
-}
-
-.CurrentSessionform .SessionNameInline input{
-    border-color: rgb(199, 235, 195);
-    box-shadow: none;
-    border-width: 0px;
+  }
+  
+  .CurrentSessionform .SessionNameInline input {
+    border-width: 1px;
     margin-left: 2px;
-}
-
-
-.CurrentSessionform .CurrentSessionformContent{
+    margin-bottom: 5px;
+  }
+  
+  .CurrentSessionform .CurrentSessionformContent {
     margin-left: 20px;
     padding: 10px;
-}
-#tabsList{
+  }
+  
+  #tabsList {
     list-style-type: none;
     padding: 0;
     margin: 5xp;
     align-self: start;
-}
-
-.CurrentSessionform #saveTabs{
+  }
+  
+  .CurrentSessionform #saveTabs {
     font-size: medium;
     background-color: #3498db;
     color: white;
@@ -100,43 +137,55 @@ body{
     font-family: Arial, sans-serif;
     cursor: pointer;
     margin: 5px;
-}
-
-.CurrentSessionformContent #tabsList li {
-    margin: 8px 0; /* Adds more space between list items */
-    padding: 10px 15px; /* Better padding for a more balanced look */
-    border: 1px solid #ccc; /* Softer border color */
-    border-radius: 8px; /* More rounded corners for a modern look */
+  }
+  
+  .CurrentSessionformContent #tabsList li {
+    margin: 8px 0;
+    /* Adds more space between list items */
+    padding: 10px 15px;
+    /* Better padding for a more balanced look */
+    border: 1px solid #ccc;
+    /* Softer border color */
+    border-radius: 8px;
+    /* More rounded corners for a modern look */
     list-style-type: none;
-    background-color: #f9f9f9; /* Lighter background for contrast */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition on hover */
-    display: flex; /* Align content inside the list item */
-    justify-content: start; /* Distributes space between elements */
-    align-items: center; /* Vertically aligns content */
-}
-
-.CurrentSessionformContent #tabsList li:hover {
-    background-color: #eaeaea; /* Slightly darker on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Larger shadow on hover */
-}
-
-.CurrentSessionformContent #tabsList li input[type="checkbox"] {
-    margin-right: 15px; /* Spacing between checkbox and text */
-}
-
-.CurrentSessionformContent #tabsList li .tab-title {
+    background-color: #f9f9f9;
+    /* Lighter background for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Smooth transition on hover */
+    display: flex;
+    /* Align content inside the list item */
+    justify-content: start;
+    /* Distributes space between elements */
+    align-items: center;
+    /* Vertically aligns content */
+  }
+  
+  .CurrentSessionformContent #tabsList li:hover {
+    background-color: #eaeaea;
+    /* Slightly darker on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Larger shadow on hover */
+  }
+  
+  .CurrentSessionformContent #tabsList li input[type="checkbox"] {
+    margin-right: 15px;
+    /* Spacing between checkbox and text */
+  }
+  
+  .CurrentSessionformContent #tabsList li .tab-title {
     font-weight: bold;
     color: #333;
-}
-
-.CurrentSessionformContent #tabsList li .tab-url {
+  }
+  
+  .CurrentSessionformContent #tabsList li .tab-url {
     color: #666;
     font-size: 0.9em;
-}
-
-
-#popuplink{
+  }
+  
+  #popuplink {
     font-size: medium;
     background-color: #3498db;
     color: white;
@@ -147,5 +196,4 @@ body{
     font-family: Arial, sans-serif;
     cursor: pointer;
     margin: 5px;
-}
-
+  }

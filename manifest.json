@@ -8,6 +8,6 @@
     "tabs"
   ],
   "action": {
-    "default_popup": "RestoreSession.html"
+    "default_popup": "popup.html"
   }
 }
