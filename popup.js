@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const year = today.getFullYear();
 
   // Format the date (DD/MM/YYYY)
-  const formattedDate = `${date}/${month}/${year}`;
+  const formattedDate = ` ${date}/${month}/${year}`;
   document.getElementById('sessionDate').textContent = formattedDate;
 
   // Retrieve active tabs from storage and display them

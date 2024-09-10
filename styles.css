@@ -1,10 +1,23 @@
 h1 {
-    color: #3498db;
-    /* This is a shade of blue */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
+    
     font-style: bold;
     text-align: center;
+    color: #3498db;
+    font-size: 20px;
+    top: 10px;
+    text-align: left;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  p{
+    text-align: center;
+    font-size: 12px;
+    color: #636363;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
   }
   
   body {

@@ -21,10 +21,10 @@ chrome.runtime.onInstalled.addListener(() => {
       });
     });
   }
-  
+  storeActiveTabs();
   // Listen for clicks on the extension icon
   chrome.action.onClicked.addListener(() => {
     console.log("Icon clicked!"); // Check if this logs when clicking the icon
     storeActiveTabs();
   });
-  storeActiveTabs();
+ 
