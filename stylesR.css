@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+*{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    letter-spacing: -0.25px;
+}
+
+li {
+    background-color: beige;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#sessionsList {
+    font-family: 'Space Mono', monospace; 
+    margin-top: 20px;
+    background-color: beige;
+    padding: 10px;
+}
+
+.session{
+    letter-spacing: 1px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    
+ }
+
+.session:hover {
+    background-color: #a7f2f5;
+    transition: background-color 0.3s ease;
+}
+
+
+.header {
+    position: static;
+
+}
+
+
+/* Style for the delete session button */
+.delete-session-button {
+    background-color: #ff4d4d; /* Red background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Add some space between buttons */
+}
+
+/* Hover effect for delete button */
+.delete-session-button:hover {
+    background-color: #e60000; /* Darker red on hover */
+}
+
+
+h1 {
+    color: #3498db;
+    font-size: 20px;
+    top: 10px;
+    text-align: left;
+    margin-left: 120px;
+    margin-top: 10px;
+    margin-right: 250px;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.session i {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.session:hover i {
+    transition: color 0.3s ease;
+}
+
+.session-checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #ff4d4d; /* Red delete button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e60000;
+}
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="popup.js"></script>
+        <script src="background.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>SaveCurrentSession</title>
+    </head>
+    <body>
+        <h1> Save Current Session </h1>
+        <form class="CurrentSessionform" action="">
+            <div class = "CurrentSessionformContent">
+                <div class="SessionNameInline">
+                    <label for="sessionName">
+                        Session Name:
+                    </label>
+                    <input type="text" id="sessionName" name="sessionName" required>
+                </div>
+                
+                <!-- Date container -->
+                 <div class="sessionDate" style="display: flex;">
+                    <label for="sessionDate">Today's Date:</label>
+                    <data id="sessionDate"></data>
+                 </div>
+                 <input type="checkbox" id="selectAll"> Select All
+                 <ul id="tabsList"></ul>
+                
+                <button type="submit" id="saveTabs">Save</button>
+                
+            </div>
+        </form>
+
+    </body>
+</html>
